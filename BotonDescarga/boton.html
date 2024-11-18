@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón de Descarga con Pacman</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <button id="downloadButton" class="button">Descargar</button>
+        <button id="downloadCompleteButton" class="button" hidden>¡Descarga Copmletada!</button>
+        <div class="pacman-track">
+            <div class="pacman">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="40px" height="40px"
+                    viewBox="0 0 1280.000000 936.000000" preserveAspectRatio="xMidYMid meet" id="pacman-open"
+                    class="pacman-open">
+                    <g transform="translate(0,936) scale(0.12,-0.12)" fill="#000000" stroke="none">
+                        <path fill="#fff000" stroke="#fff000"
+                            d="M4365 9350 c-498 -38 -961 -143 -1415 -322 -173 -68 -518 -240 -683 -340 -1240 -752 -2058 -2015 -2231 -3443 -125 -1033 95 -2074 625 -2960 398 -664 941 -1210 1606 -1613 165 -100 510 -272 683 -340 214 -84 460 -161 660 -207 627 -144 1252 -162 1874 -55 1126 193 2143 796 2860 1694 135 168 317 430 305 439 -2 2 -894 559 -1981 1238 -1088 679 -1978 1236 -1978 1239 0 3 890 560 1978 1239 1087 679 1979 1236 1981 1238 12 9 -173 275 -314 450 -308 384 -671 714 -1087 987 -632 414 -1333 663 -2089 741 -183 19 -625 27 -794 15z" />
+                    </g>
+                </svg>
+                <svg width="40px" height="40px" id="pacman-close" class="pacman-close">
+                    <circle fill="#fff000" stroke="#fff000" cx="18" cy="18" r="18" />
+                </svg>
+                <div id="background"></div>
+            </div>
+
+            <div id="smallFruits" class="smallFruits">
+                <svg width="30px" height="10px" id="sF1">
+                    <circle fill="#00f" stroke="#00f" cx="5" cy="5" r="5" />
+                </svg>
+                <svg width="30px" height="10px" id="sF2">
+                    <circle fill="#00f" stroke="#00f" cx="5" cy="5" r="5" />
+                </svg>
+                <svg width="30px" height="10px" id="sF3">
+                    <circle fill="#00f" stroke="#00f" cx="5" cy="5" r="5" />
+                </svg>
+                <svg width="30px" height="10px" id="sF4">
+                    <circle fill="#00f" stroke="#00f" cx="5" cy="5" r="5" />
+                </svg>
+                <svg width="30px" height="10px" id="sF5">
+                    <circle fill="#00f" stroke="#00f" cx="5" cy="5" r="5" />
+                </svg>
+            </div>
+
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="25px" height="25px"
+                viewBox="0 0 1162.000000 1280.000000" preserveAspectRatio="xMidYMid meet" class="fruit" id="fruit">
+                <g transform="translate(0.000000,1280.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
+                    <path fill="#F00" stroke="#F00"
+                        d="M7210 12770 c-36 -17 -103 -47 -150 -67 -103 -42 -173 -86 -201 -124 -11 -16 -25 -54 -31 -86 -32 -173 -70 -265 -198 -488 -84 -147 -128 -238 -144 -299 -8 -30 -28 -86 -46 -125 -44 -101 -132 -331 -165 -429 -23 -71 -42 -103 -127 -215 -912 -1202 -1649 -2597 -2148 -4062 -145 -428 -259 -826 -425 -1480 -135 -533 -133 -525 -153 -525 -40 0 -211 100 -377 221 -99 72 -209 147 -244 167 -213 119 -447 175 -741 176 -157 1 -234 -10 -406 -54 -344 -90 -648 -273 -925 -556 -381 -391 -628 -910 -711 -1494 -16 -118 -16 -551 2 -735 95 -1024 625 -1916 1385 -2330 628 -342 1491 -353 2330 -28 122 47 392 179 512 249 467 273 893 660 1135 1029 201 306 347 684 403 1045 22 145 31 430 16 571 -62 599 -373 1078 -883 1361 -293 163 -570 236 -927 245 l-204 6 6 96 c7 106 134 813 198 1094 168 744 631 1940 1106 2857 270 521 551 994 913 1537 68 102 103 140 85 96 -9 -25 -42 -361 -50 -513 -13 -249 25 -599 96 -883 178 -707 568 -1347 1191 -1952 208 -203 353 -332 542 -484 l139 -112 -64 8 c-93 12 -332 8 -419 -6 -190 -32 -418 -105 -581 -187 -314 -157 -619 -461 -774 -774 -291 -583 -263 -1351 74 -2055 325 -678 805 -1209 1386 -1533 415 -231 855 -339 1278 -311 736 48 1361 293 1839 722 363 326 666 929 793 1579 119 610 93 1147 -80 1673 -209 636 -618 1104 -1150 1319 -174 70 -407 114 -550 102 -194 -15 -355 -75 -795 -298 -168 -85 -337 -165 -376 -178 l-72 -24 -193 121 c-246 154 -434 282 -591 403 -139 107 -468 429 -597 585 -462 558 -721 1104 -822 1733 -26 164 -36 523 -20 712 22 255 56 449 123 715 l41 160 105 130 c135 167 338 402 377 436 22 20 45 29 86 33 72 8 168 56 210 104 41 46 102 177 124 262 22 89 29 101 80 134 79 49 95 77 95 160 0 40 9 121 20 181 34 184 25 261 -36 334 -40 48 -98 74 -179 78 -63 4 -77 1 -135 -27z" />
+                </g>
+            </svg>
+        </div>
+    </div>
+
+</body>
+
+</html>

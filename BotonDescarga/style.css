@@ -1,0 +1,142 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.button {
+    z-index: 10;
+    background-color: #fff000;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    margin: 20px;
+
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    height: 60px;
+}
+
+.button:hover {
+    background-color: #ffc400;
+}
+
+
+.pacman-track { 
+    z-index: 2;
+    background-color: #000;
+    border-radius: 12px;
+    border: 4px solid #fff000;  
+    padding: 10px 15px;
+    box-sizing: border-box;
+    margin: 20px;
+
+    position: absolute;
+    justify-self: center;
+    align-self: center;
+    width: 300px;
+    height: 60px;
+}
+
+.pacman{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.pacman-open{
+    z-index: 3;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.pacman-close{
+    z-index: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#background{
+    z-index: 1;
+    position: absolute;
+    background-color: #000;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
+}
+
+.fruit{
+    z-index: 2;
+    position: absolute;
+    top: 13px;
+    right: 15px;
+}
+
+#sF1{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 60px;
+}
+
+#sF2{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+}
+
+#sF3{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 140px;
+}
+
+#sF4{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 180px;
+}
+
+#sF5{
+    z-index: 2;
+    position: absolute;
+    top: 20px;
+    left: 220px;
+}
+
+#downloadCompleteButton{
+    background-color: #ffc400;
+}
